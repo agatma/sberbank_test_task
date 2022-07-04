@@ -33,13 +33,11 @@ This project shows one of the possible ways to implement RESTful API server: imp
 
 ## Installation
 
-1. Clone repository.
-2. pip install requirements.txt
-3. run next commands:
-```
-docker ps 
-docker run --name postgres -p 5434:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-```
+1. Create PostgreSQL database
+2. Create and fill .env using .env.example
+3. Install requirements using python3.9 -m pip install -r requirements.txt
+
+The required python version is 3.9
 
 ## Usage
 
