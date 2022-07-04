@@ -4,22 +4,22 @@ from sqlalchemy.exc import SQLAlchemyError
 from typing import Tuple, Dict
 from werkzeug.utils import secure_filename
 
-from utils.responses import (
+from service.utils.responses import (
     EMPTY_FILE_PATH,
     ERROR_UPLOADING_FILE,
     FILE_NOT_FOUND,
     INCORRECT_FILE_TYPE,
     SUCCESS_FILE_UPLOADED,
 )
-from utils.queries import execute_query, TRUNCATE_AND_CREATE_TABLE
-from utils.parsing import (
+from service.utils.queries import execute_query, TRUNCATE_AND_CREATE_TABLE
+from service.utils.parsing import (
     allowed_file_type,
     data_processing,
     df_to_sql,
     PandasDataFrame,
 )
 
-from utils.logger import api_logger, SQLALCHEMY_ERROR_LOG_MSG, PANDAS_ERROR_LOG_MSG
+from service.utils.logger import api_logger, SQLALCHEMY_ERROR_LOG_MSG, PANDAS_ERROR_LOG_MSG
 
 
 class ImportService:
