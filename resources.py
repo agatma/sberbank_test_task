@@ -2,7 +2,7 @@ from flask import request
 from flask_restful import Resource, reqparse
 from typing import Dict
 
-from utils.response_messages import INCORRECT_FILE_PATH, EXPORT_QUERY_ERROR
+from service.utils.responses import INCORRECT_FILE_PATH, EXPORT_QUERY_ERROR
 from service.export_service import ExportService
 from service.import_service import ImportService
 

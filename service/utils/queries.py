@@ -1,6 +1,6 @@
 from db import db
 from sqlalchemy import text
-from utils.typevars import SQLAlchemyEngine
+from service.utils.export import SQLAlchemyEngine
 
 TRUNCATE_AND_CREATE_TABLE = """
 TRUNCATE delta_model RESTART IDENTITY;

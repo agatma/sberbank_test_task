@@ -2,7 +2,7 @@ from db import db
 from flask import Flask
 from flask_restful import Api
 from resources import Import, Export
-from utils.sql_views import delta_view
+from service.utils.create_view import delta_view
 
 app = Flask(__name__)
 app.config.from_object("config.DevConfig")

@@ -3,7 +3,7 @@ import pathlib
 from db import db
 from models import DeltaModel
 from pandas import pandas as pd
-from service.utils.export_file import PandasDataFrame
+from service.utils.export import PandasDataFrame
 
 
 def allowed_file_type(filename: str) -> bool:

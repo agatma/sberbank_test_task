@@ -4,7 +4,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from typing import Tuple, Dict
 from werkzeug.utils import secure_filename
 
-from utils.response_messages import (
+from utils.responses import (
     EMPTY_FILE_PATH,
     ERROR_UPLOADING_FILE,
     FILE_NOT_FOUND,
@@ -12,14 +12,14 @@ from utils.response_messages import (
     SUCCESS_FILE_UPLOADED,
 )
 from utils.queries import execute_query, TRUNCATE_AND_CREATE_TABLE
-from utils.import_file import (
+from utils.parsing import (
     allowed_file_type,
     data_processing,
     df_to_sql,
     PandasDataFrame,
 )
 
-from utils.api_logger import api_logger, SQLALCHEMY_ERROR_LOG_MSG, PANDAS_ERROR_LOG_MSG
+from utils.logger import api_logger, SQLALCHEMY_ERROR_LOG_MSG, PANDAS_ERROR_LOG_MSG
 
 
 class ImportService:
