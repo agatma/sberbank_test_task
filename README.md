@@ -4,6 +4,7 @@
 
 This project shows one of the possible ways to implement RESTful API server: import xlsx and export json. It is worth noting that this is the MVP version of the service. It has not been tested and there are some architectural problems that generally do not affect the functionality of the service.
 
+To learn more about the approach to the project and the stages, follow the link - https://docs.google.com/document/d/1AptbmwC4PmcfOXYc-qPs8QA8-blSoTY8hAzfG4m6yy0/edit?usp=sharing
 
 <b>Forewarned is forearmed</b>.
 
