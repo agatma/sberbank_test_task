@@ -19,17 +19,16 @@ This project shows one of the possible ways to implement RESTful API server: imp
 ├── resources.py
 ├── requirements.txt
 │── service
-│     ├── export_service.py
-│     └── import_service.py
-│── utils
-│     ├── api_logger.py
-│     ├── export_file.py
-│     ├── import_file.py
-│     ├── queries.py
-│     ├── response_messages.py
-│     ├── sql_views.py
-└──   └── typevars.py
-        
+│       │── utils
+│       │     ├── logger.py
+│       │     ├── export.py
+│       │     ├── parsing.py
+│       │     ├── queries.py
+│       │     ├── responses.py
+│       │     ├── create_view.py
+│       │     
+│       ├── export_service.py
+│       └── import_service.py
 ```
 
 ## Installation
