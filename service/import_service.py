@@ -32,7 +32,7 @@ class ImportService:
         if not allowed_file_type(file):
             return {"message": INCORRECT_FILE_TYPE}, 400
         if not os.path.exists(file):
-            return {"message": FILE_NOT_FOUND.format(file)}, 400
+            return {"message": FILE_NOT_FOUND.format(file)}, 404
         try:
             execute_query(TRUNCATE_AND_CREATE_TABLE)
         except SQLAlchemyError as e:
