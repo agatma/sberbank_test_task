@@ -4,20 +4,20 @@ from sqlalchemy.exc import SQLAlchemyError
 from typing import Tuple, Dict, Union
 
 from db import db
-from utils.logger import (
+from service.utils.logger import (
     api_logger,
     SQLALCHEMY_ERROR_LOG_MSG,
     PANDAS_ERROR_LOG_MSG,
     JSON_ERROR,
 )
-from utils.export import sql_to_json, df_to_json
-from utils.parsing import PandasDataFrame
-from utils.queries import (
+from service.utils.export import sql_to_json, df_to_json
+from service.utils.parsing import PandasDataFrame
+from service.utils.queries import (
     execute_query_and_return,
     SELECT_DATA_WITH_DELTA_LAG,
     SELECT_ALL_FROM_DELTA_MODEL,
 )
-from utils.responses import EXPORT_FILE_ERROR, ERROR_EXPORTING_FILE
+from service.utils.responses import EXPORT_FILE_ERROR, ERROR_EXPORTING_FILE
 
 
 class ExportService:
