@@ -5,7 +5,7 @@
 This project shows one of the possible ways to implement RESTful API server: import xlsx and export json. It is worth noting that this is the MVP version of the service. It has not been tested and there are some architectural problems that generally do not affect the functionality of the service.
 
 
-<b>Forewarned is forearmed</b>
+<b>Forewarned is forearmed</b>.
 
 ## TECH
 1. [Flask-RESTful] - restful API library.
