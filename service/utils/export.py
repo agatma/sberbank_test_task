@@ -1,6 +1,9 @@
 import json
-from typing import List
-from utils.typevars import PandasDataFrame, DeltaJson, SQLAlchemyEngine
+from typing import TypeVar, Dict, Union, List
+
+PandasDataFrame = TypeVar("pandas.core.frame.DataFrame")
+SQLAlchemyEngine = TypeVar("sqlalchemy.engine.cursor.LegacyCursorResult")
+DeltaJson = Dict[str, Union[int, str, float]]
 
 
 def df_to_json(df: PandasDataFrame) -> List[DeltaJson]:
