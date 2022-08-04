@@ -9,8 +9,7 @@ DeltaJson = Dict[str, Union[int, str, float]]
 def df_to_json(df: PandasDataFrame) -> List[DeltaJson]:
     df = df.to_dict(orient="records")
     df = json.dumps(df, default=str)
-    json_df = json.loads(df)
-    return json_df
+    return json.loads(df)
 
 
 def sql_to_json(row: SQLAlchemyEngine, delta_lag=False) -> DeltaJson:

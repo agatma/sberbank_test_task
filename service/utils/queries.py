@@ -14,11 +14,12 @@ CREATE TABLE if not exists delta_model (
 
 SELECT_ALL_FROM_DELTA_MODEL = "SELECT * FROM delta_model"
 
-SELECT_DATA_FOR_VIEW = f"""SELECT  *, LAG(delta, 2) 
+SELECT_DATA_FOR_VIEW = """SELECT  *, LAG(delta, 2) 
     OVER(ORDER BY to_char(rep_dt, 'YYYY-MM') DESC) AS delta_lag 
     FROM delta_model ORDER BY rep_dt;"""
 
-SELECT_DATA_WITH_DELTA_LAG = f"""SELECT  *, LAG(delta, :lag_num) 
+
+SELECT_DATA_WITH_DELTA_LAG = """SELECT  *, LAG(delta, :lag_num) 
     OVER(ORDER BY to_char(rep_dt, 'YYYY-MM') DESC) AS delta_lag 
     FROM delta_view ORDER BY rep_dt;"""
 

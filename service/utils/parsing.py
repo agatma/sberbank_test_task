@@ -7,7 +7,7 @@ from service.utils.export import PandasDataFrame
 
 
 def allowed_file_type(filename: str) -> bool:
-    allowed_extensions = set([".xlsx", ".xls"])
+    allowed_extensions = {".xlsx", ".xls"}
     extension = pathlib.Path(filename).suffix
     return extension in allowed_extensions
 

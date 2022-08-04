@@ -18,14 +18,14 @@ class Import(Resource):
             file: Dict[str, str] = Import.parser.parse_args()
         except KeyError:
             return {"message": INCORRECT_FILE_PATH}, 400
-        response = ImportService.import_file_to_sql(file)
-        return response
+        return ImportService.import_file_to_sql(file)
 
 
 class Export(Resource):
     def get(self, property: str):
         lag_num = request.args.get("lag_num", 2, type=int)
-        if not isinstance(lag_num, int):
-            return {"message": EXPORT_QUERY_ERROR}, 400
-        response = ExportService.export_df(property, lag_num)
-        return response
+        return (
+            ExportService.export_df(property, lag_num)
+            if isinstance(lag_num, int)
+            else ({"message": EXPORT_QUERY_ERROR}, 400)
+        )
